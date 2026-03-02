@@ -12,11 +12,14 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Profile Photo */}
         <div className="flex justify-center mb-8">
-          <div className="neo-box-primary p-2 bg-muted inline-block">
-            <img
-              src={profileImg}
-              alt="STAA Developer Profile"
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover"
+          <div className="neo-box-primary p-2 bg-muted inline-block select-none pointer-events-none">
+            <div
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-cover bg-center"
+              style={{ backgroundImage: `url(${profileImg})` }}
+              role="img"
+              aria-label="STAA Developer Profile"
+              onContextMenu={(e) => e.preventDefault()}
+              draggable={false}
             />
           </div>
         </div>

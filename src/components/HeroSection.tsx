@@ -1,3 +1,5 @@
+import profileImg from "@/assets/profile.png";
+
 const HeroSection = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
@@ -8,6 +10,17 @@ const HeroSection = () => {
       }} />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
+        {/* Profile Photo */}
+        <div className="flex justify-center mb-8">
+          <div className="neo-box-primary p-2 bg-muted inline-block">
+            <img
+              src={profileImg}
+              alt="STAA Developer Profile"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover"
+            />
+          </div>
+        </div>
+
         {/* Level badge */}
         <div className="inline-block neo-box bg-accent text-accent-foreground px-4 py-2 mb-8 font-mono text-xs tracking-widest">
           ◆ PLAYER ONE READY ◆
